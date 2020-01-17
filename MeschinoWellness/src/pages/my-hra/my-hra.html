@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>My HRA</ion-title>
+       <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button> 
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="title">
+  <h3>My Wellness Wallet</h3>    
+  <p>Please complete the HRA process</p>
+</div> 
+  <ion-card (click)="goToHraDetail(cardData,(i+1))" *ngFor="let cardData of HraDetailSections.lst_hra_section; let i = index;" [ngClass] = "(HraDetailSections.lstCompletedSection.indexOf(cardData.report_section_num) !== -1) ? 'active' : '' ">
+    <ion-icon *ngIf="HraDetailSections.lstCompletedSection.indexOf(cardData.report_section_num) !== -1" class="list-icon" color="primary" name="checkmark-circle"></ion-icon>
+    <ion-icon *ngIf="HraDetailSections.lstCompletedSection.indexOf(cardData.report_section_num) === -1" class="list-icon" name="radio-button-off" ></ion-icon>
+    <button menuClose ion-item [disabled]="IsCheckAllow(cardData, false) ? false : true">
+     {{cardData.description}}
+    </button>
+    
+  </ion-card>
+</ion-content>

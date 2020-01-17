@@ -1,0 +1,51 @@
+<ion-menu class="main-menu" [content]="content">
+    <ion-header color="primary">
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="{{ profilepic }}" />
+            </ion-avatar>
+            <h2>{{ user_name }}</h2>
+            <p>
+                <ion-icon name="medal"></ion-icon>{{ rewardpoints }} Points
+            </p>
+        </ion-item>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <ion-item *ngFor="let p of pages">
+                <ion-icon><img src="assets/icon/{{ p.manuIcon }}.png" height="16px" width="16px"  class="img-menu"/></ion-icon>
+                <button menuClose class="menu-item" (click)="openPage(p)">
+                    {{ p.title }}
+                </button>
+            </ion-item>
+            <ion-item>
+                <ion-icon><img src="assets/img/policy.png" height="16px" width="16px" class="img-menu"/></ion-icon>
+                <button menuClose class="menu-item" (click)="ViewTemplate('TermsAndConditions')">
+                    Privacy Policy and Terms
+                </button>
+            </ion-item>
+            <ion-item>
+                <ion-icon><img src="assets/img/precautions-disclaimers.png" height="16px" width="16px" class="img-menu"/></ion-icon>
+                <button menuClose class="menu-item" (click)="ViewTemplate('PrecautionsandDisclaimer')">
+                    Precautions and Disclaimer
+                </button>
+            </ion-item>
+            <ion-item *ngIf="!IshiddenLink">
+                <ion-icon><img src="assets/img/website.png" height="16px" width="16px" class="img-menu"/></ion-icon>
+                <button class="menu-item" (click)="openPortal()">
+                    Visit Website
+                </button>
+            </ion-item>
+            <ion-item>
+                <img src="assets/img/ad.png" (click)="downloadPDF()" />
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-footer padding color="primary">
+        <button menuClose (click)="logOut()" ion-button color="primary" class="big-btn">
+            <ion-icon padding name="shuffle"></ion-icon>
+            Logout
+        </button>
+    </ion-footer>
+</ion-menu>
+<ion-nav #content [root]="rootPage"></ion-nav>

@@ -1,0 +1,87 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Consent</ion-title>
+    <!--
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/avtar.jpg">
+      </ion-avatar>
+      <h2>{{account.FirstName}} {{account.LastName}}</h2>
+      <p>
+        <ion-icon name="medal"></ion-icon>296 Points
+      </p>
+    </ion-item>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button> -->
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <!-- <div class="title">
+    <h3>My HRA Wallet</h3>
+    <p>HRA process - Confirmation
+
+    </p>
+  </div> -->
+  <div class="div-consent">
+    <p>
+      Congratulations {{userName}} on completing your Meschino Health Risk Assessment.
+    </p>
+    <p>
+      This report identifies important health risks as well as lifestyle strategies to help manage health issues of
+      importance to you.
+    </p>
+    <p>
+      This report has identified the following health issue(s) based on your responses.
+    </p>
+    <div>
+
+      <ul>
+        <li *ngFor="let rpt of RiskReportDetails ; index as i">
+          <img src="assets/img/arrow.png"> <label class="col-lg-12 mrg-top5"> {{rpt.description}} </label>
+        </li>
+      </ul>
+      <div>
+
+        <div class="col-lg-12" id="divHRAMessage1" style="padding: 20px 0 5px 0;">
+          <p>Receive the latest research updates on the prevention and management of key health issues, along with Dr.
+            Meschino's short “Will Power Moment” videos, explaining proven strategies to keep you on track and
+            motivated.
+          </p>
+        </div>
+
+        <ion-item>
+          <ion-label>I accept that Meschino Health & Wellness will send me valuable information described in the above
+            paragraph.</ion-label>
+          <ion-checkbox [(ngModel)]="account.Accept" name="Accept"></ion-checkbox>
+        </ion-item>
+
+      </div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+
+    <button ion-button color="primary" class="big-btn" (click)="submitConfirm()">CONFIRM CONSENT</button>
+  </ion-toolbar>
+
+  <!-- <p class="imp-note">
+        <b>Important Note:</b>&nbsp;By opting in to our communications you will begin receiving emails with valuable
+        information on health and nutrition from Dr. Meschino. We respect your privacy - we do not sell or
+        distribute information gathered in this form. Information gathered in this form is used solely for the
+        purpose of providing valuable information on health and nutrition from Dr. Meschino. Review our&nbsp;privacy
+        policy.
+      </p>
+      <div class="address">
+        <b>Address:</b> Meschino Health &amp; Wellness,
+        5500 Explorer Drive, 3rd Floor,
+        Mississauga, Ontario,
+        <br>
+        Canada L4W 5C7.
+        <b>Contact Number:</b>1-844-770-1075 x390 <b>Email:</b> <a
+          href="mailto:support@meschinowellness.com">support@meschinowellness.com</a>
+      </div>
+    -->
+</ion-footer>

@@ -1,0 +1,183 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.bg-white{
+	border-radius: 5px;
+	border: 1px solid rgb(250, 250, 250);
+	background-color: rgb(250, 250, 250);
+}
+a { color:#3070b7; text-decoration: non;}
+.button-md {text-transform: none; font-size: 14px; color: #3070b7;  font-weight: normal}
+.button-md-primary {
+	color: #fff;
+	background-color: #4dbbf0;
+}
+.big-btn { width:200px; margin: 0 auto; display: block;}
+.content-md { background-color:#fafafa;}
+ion-app.md {
+	font-family: 'Gotham';
+	font-size: 1.4rem;
+	background-color: #fff;
+}
+
+.item-md.item-input.input-has-focus .item-inner {
+  border-color: #ccc !important;
+  box-shadow: none !important;
+}
+
+.list-md .item-input.input-has-focus:last-child {
+  border-color: #ccc !important;
+  box-shadow: none !important;
+}
+
+.list-md .item-input.input-has-focus:last-child .item-inner {
+  box-shadow: none;
+}
+
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+  border-color: #ccc !important;
+  box-shadow: none !important;
+}
+
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+  border-color: #ccc !important;
+  box-shadow: none !important;
+}
+
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner {
+  box-shadow: none;
+}
+
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+  border-color: #ccc !important;
+  box-shadow: none !important;
+}
+
+.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+  border-color: #ccc !important;
+  box-shadow: none !important;
+}
+
+.text-input-md { font-family: 'Gotham';}
+.item-checkbox .input-wrapper { font-weight: 500;font-family: 'Gotham';}
+.label-md[stacked] {    
+	font-family: 'Gotham';
+	font-weight: 500;
+}
+.card-md {
+	border-radius:10px;	
+}
+.item-checkbox { padding-left: 0px;}
+.item.item-md .checkbox-md { margin-right: 16px;}
+.checkbox-md .checkbox-icon { border-width:1px; border-color:#ccc; width:21px; height:21px;  }
+.checkbox-md .checkbox-checked { background: none;border-color:#ccc;}
+.checkbox-md .checkbox-checked .checkbox-inner { border-color:#4dbbec; margin: 3px;}
+.custom-border.item-md {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: solid 1px #cccccc;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+.footer .toolbar-background-md { background: #fff;}
+.toolbar-content { text-align: center;}
+.show-back-button + .toolbar-content { margin-left: -50px; position: relative;z-index: -1;}
+
+.toolbar-md-primary .toolbar-background-md {
+	background: rgba(50,170,222,1);
+	background: -moz-linear-gradient(left, rgba(50,170,222,1) 0%, rgba(58,103,202,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(50,170,222,1)), color-stop(100%, rgba(58,103,202,1)));
+	background: -webkit-linear-gradient(left, rgba(50,170,222,1) 0%, rgba(58,103,202,1) 100%);
+	background: -o-linear-gradient(left, rgba(50,170,222,1) 0%, rgba(58,103,202,1) 100%);
+	background: -ms-linear-gradient(left, rgba(50,170,222,1) 0%, rgba(58,103,202,1) 100%);
+	background: linear-gradient(to right, rgba(50,170,222,1) 0%, rgba(58,103,202,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32aade', endColorstr='#3a67ca', GradientType=1 );
+}
+
+.main-menu .toolbar-md { height: 170px;}
+.main-menu ion-header:after { display: none;}
+
+.main-menu ion-avatar img { width: 85px; height: 85px; display: inline-block; border-radius: 50%; border:solid 4px #285499;}
+.main-menu .header .item-block { display: block; text-align: center;}
+.main-menu .label-md,.main-menu .item-md p{ color: #fff;}
+.menu-item { background: none; color: #fff; }
+
+.item.item-block .item-inner {border:none; margin-bottom: 1px;}
+.main-menu .item-md{background: rgba(58,103,202,1);
+  background: -moz-linear-gradient(left, rgba(58,103,202,1) 0%, rgba(50,170,222,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(58,103,202,1)), color-stop(100%, rgba(50,170,222,1)));
+  background: -webkit-linear-gradient(left, rgba(58,103,202,1) 0%, rgba(50,170,222,1) 100%);
+  background: -o-linear-gradient(left, rgba(58,103,202,1) 0%, rgba(50,170,222,1) 100%);
+  background: -ms-linear-gradient(left, rgba(58,103,202,1) 0%, rgba(50,170,222,1) 100%);
+  background: linear-gradient(to right, rgba(58,103,202,1) 0%, rgba(50,170,222,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a67ca', endColorstr='#32aade', GradientType=1 );}
+
+.alertValidation {
+  .alert-wrapper{
+    border-radius: 0.7em
+  }
+  .alert-head {
+    background-image: url("../assets/img/error_popup_icn.png");
+    padding: 15px 15px 15px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-size:  contain;
+    background-position: center;  
+  }
+}  
+.toast-top
+{
+  top : 5px !important;
+}
+.toast-wrapper
+{
+  border-radius: 5px;
+}
+.toast-container
+{
+  /*background-color: #3070b7 !important; */
+}
+.toast-message{
+  font-family: "Gotham";
+  font-weight: 500 !important;
+  font-size: 1.25rem !important;
+  color: #fff !important;
+  padding: 15px 15px 12px !important;
+}
+.alert-Validation {
+  .alert-wrapper{
+    border-radius: 0.7em
+  }
+}  
+.img-menu
+{
+  margin-bottom: -3px !important;
+}
+
+
+.toolbar-title-md {
+  padding: 0 12px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #424242;
+}
+.left-nav-buttons
+{
+  position: absolute;
+  right: 21px;
+  top: 42px;
+}

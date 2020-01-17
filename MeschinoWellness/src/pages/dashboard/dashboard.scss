@@ -1,0 +1,103 @@
+page-dashboard {
+  .card-md,
+  .card-ios {
+    box-shadow: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: visible;
+  }
+  .item-md {
+    padding-left: 40px;
+  }
+  .list-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    font-size: 20px;
+  }
+  .list-icon:after {
+    content: "";
+    width: 1px;
+    height: 40px;
+    background: #d9d9d9;
+    display: block;
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    top: 16px;
+  }
+  ion-card:last-child .list-icon:after {
+    display: none;
+  }
+  ion-card.active > .list-icon:after {
+    background: color($colors, primary);
+  }
+  // ion-card.active ~ ion-card .list-icon { color: #d9d9d9;}
+  .title {
+    padding: 0 10px;
+    color: #6d6d6d;
+  }
+  .title h3 {
+    font-family: "Gotham";
+  }
+  .title p {
+    font-family: "Gotham";
+    font-weight: 500;
+  }
+
+  .toolbar-md {
+    height: 200px;
+  }
+  ion-header:after {
+    display: none;
+  }
+  .toolbar-background {
+    transform: scale(1.3) translateY(-33px);
+    box-shadow: 0px 0px 5px grey;
+    border-radius: 50%;
+  }
+  
+  .header .item-block {
+    display: block;
+    text-align: center;
+    background: none;
+    padding: 10px 0;
+  }
+  ion-header h2,
+  .item p {
+    color: #fff;
+  }
+  .item.item-block .item-inner {
+    border: none;
+  }
+  
+  .toolbar-content {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  #notification-button {
+    position: absolute;
+    width: 42px;
+    top: -21px;
+    right: 1px;
+    overflow: visible !important;
+  }
+
+  #notifications-badge {
+    background-color: red;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    border-radius: 100%;
+  }
+  .toolbar{
+    -webkit-align-items : baseline;
+    padding: 20px 10px;
+  }
+}

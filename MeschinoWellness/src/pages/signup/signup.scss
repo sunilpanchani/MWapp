@@ -1,0 +1,30 @@
+page-signup {
+    .custom-tab { margin: 30px auto; overflow: hidden; text-align: center; padding:30px 0 0; position: relative}
+    .custom-tab  li { list-style: none; margin: 5px; width:45px; height: 45px; border:solid 1px #b8b8b8; border-radius: 50%;display: inline-block;}
+    .custom-tab  li  { text-align: center; color: #b8b8b8; text-decoration: none;}
+    
+    .custom-tab  li .ico { font-size: 25px; margin:8px 0; display: inline-block;}
+    .custom-tab span.text { position: absolute; left: 50%; transform: translateX(-50%); top: 1%; font-weight: 300; color: #6a6a6a; font-size: 15px; display: none; }
+    .custom-tab  li.active { border-color: #3070b7; background: #fff; color: #3070b7;}
+    .custom-tab  li.active span.text { display: block; color: #3070b7;}
+    .note { margin-top: 100px;}
+    .note p{ color: #989898; font-size: 12px; font-weight:500;}
+    .term-note{ margin-top: 30px; display: inline-flex;}
+    .term-note .checkbox-md{ padding-top: 4px;}
+    .term-note div{ color: #989898; font-size: 12px; font-weight:500; padding-left: 4px;}
+    .list-header-md { border: none;}
+    .list-header .label-md{ text-align: center; color: #000; font-size: 16px; margin-left: -35px;}
+    .item-radio {border: none;-webkit-box-shadow: none;box-shadow: none;border: solid 1px #cccccc;border-radius: 5px;margin: 15px 0;}
+    .item-radio.item-md ion-label{ text-align: center;font-size: 16px;}
+    .item-radio-checked { border-color:#4dbbf0; }
+    .picker-col{
+        max-width: 160px !important;
+        min-width: 120px !important;
+    }
+    .cardcontent {
+        display: flex;
+    }
+    .cardcontent a {
+        padding: inherit;
+    }
+}

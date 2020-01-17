@@ -1,0 +1,32 @@
+page-mytracker {
+    .card-md, .card-ios{ box-shadow: none; border-radius: 5px; position: relative; overflow: visible}
+        .item-md { padding-left: 40px;}
+        .list-icon { position: absolute;left: 10px;top: 50%;z-index: 2;transform: translateY(-50%); font-size: 20px;}
+        .list-icon:after{content: "";width: 1px;height: 40px;background:#d9d9d9 ;display: block;position: absolute;left: 50%;z-index: -1;top: 16px;}
+        ion-card:last-child .list-icon:after{ display:none;}
+         ion-card.active > .list-icon:after { background: color($colors,primary)}
+        // ion-card.active ~ ion-card .list-icon { color: #d9d9d9;}
+        .title { padding: 0 10px; color: #6d6d6d;}
+        .title h3 { 	font-family: 'Gotham';}
+        .title p {font-family: 'Gotham'; font-weight: 500;}
+        .toolbar-md-primary .toolbar-background-md {}
+    
+        .toolbar-md { height: 280px;}
+        ion-header:after { display: none;}
+        .toolbar-background {transform: scale(1.3) translateY(-33px); box-shadow: 0px 0px 5px grey; border-radius: 50%;}
+        .item  ion-avatar img { width: 95px; height: 95px; display: inline-block; border-radius: 50%; border:solid 4px #285499;}
+        .header .item-block { display: block; text-align: center; background: none; padding: 10px 0;}
+        ion-header h2,  .item p{ color: #fff;}
+        .item.item-block .item-inner { border:none;}
+        .back-button { top: -100px; }
+        .bar-button-menutoggle { top: -100px; }
+        .toolbar-content {
+            text-align: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    
+
+}

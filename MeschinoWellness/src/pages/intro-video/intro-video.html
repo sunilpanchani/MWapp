@@ -1,0 +1,28 @@
+<!--
+  Generated template for the IntroVideoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="custom-intro-header content-bg">
+  <ion-navbar color="primary">
+    <ion-title>HRA Introduction</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="content-bg">
+  <ion-list class="list-video">
+    <ion-item class="content-bg">
+      <video width="100%" controls autoplay="autoplay" #videoPlayer>
+        <source src="https://mediasvc611wkrxkhq32k.blob.core.windows.net/asset-cc27435d-1500-80c6-2ea5-f1e515046a95/Health%20Risk%20Assessment%20-%20No%20Title.mp4?sv=2012-02-12&sr=c&si=f57a5f8d-3c43-454b-9c2a-d1f1805e9111&sig=BozyWHb1N1TOlIdDsC9GQOc2tV4vKewhxqFmrbMtw18%3D&st=2015-06-18T11%3A15%3A28Z&se=2115-05-25T11%3A15%3A28Z" type="video/mp4">
+        <source src="mov_bbb.ogg" type="video/ogg">
+        Your browser does not support HTML5 video.
+      </video>
+    </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button color="primary" class="big-btn" (click)="goToMyHra()">Start</button>
+  </ion-toolbar>
+</ion-footer>
+  

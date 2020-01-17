@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "414018168893",
+    "firebase_url": "https://meschinowellness-61e33.firebaseio.com",
+    "project_id": "meschinowellness-61e33",
+    "storage_bucket": "meschinowellness-61e33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414018168893:android:e06fd3cec6626a2a04a254",
+        "android_client_info": {
+          "package_name": "com.SEB.MeschinoWellness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414018168893-na7pgatvq10rsljaduregmnp3gnpeg1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSn5AdhkBd3381I_1Jjw3O6aRF6PYbM5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414018168893-na7pgatvq10rsljaduregmnp3gnpeg1r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "414018168893-6eea20vuuchlci87t9albs6u79rv9st3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SEB.MeschinoWellness"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

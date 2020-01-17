@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>   
+  <ul class="custom-tab">
+    <li  [ngClass]="{'active':slides[0].active}" (click)="changeTabButton(0)">
+         <span class="ico-detail ico"></span>
+        <span class="text">Enter Details</span>
+      </li>
+    <li [ngClass]="{'active':slides[1].active}" (click)="changeTabButton(1)">
+      <span class="ico-gender ico"></span>
+        <span class="text">Gender</span>
+      </li>
+    <li [ngClass]="{'active':slides[2].active}" (click)="changeTabButton(2)">
+        <span class="ico-age ico"></span>
+        <span class="text">Date of Birth</span>
+      </li>
+    <li [ngClass]="{'active':slides[3].active}" (click)="changeTabButton(3)">
+        <span class="ico-measure ico"></span>
+        <span class="text">Height</span>
+      </li>
+    <li [ngClass]="{'active':slides[4].active}" (click)="changeTabButton(4)">
+        <span class="ico-password ico"></span>
+        <span class="text">Enter Password</span>
+      </li>
+  </ul>
+  <form [formGroup]="signupForm">
+    <ion-card class="signup-card" *ngIf="slides[0].active">
+      <ion-card-content>
+        <ion-list>
+          <ion-item class="custom-border">
+            <ion-label stacked>First Name</ion-label>
+            <ion-input type="text" [(ngModel)]="account.FirstName" formControlName="FirstName"></ion-input>
+          </ion-item>
+
+          <ion-item class="custom-border">
+            <ion-label stacked>Last Name</ion-label>
+            <ion-input type="text" [(ngModel)]="account.LastName" formControlName="LastName"></ion-input>
+          </ion-item>
+
+          <ion-item class="custom-border">
+            <ion-label stacked>User Name</ion-label>
+            <ion-input type="email" [(ngModel)]="account.UserName" formControlName="UserName" ></ion-input>
+          </ion-item>
+        </ion-list>
+        <div class="note">
+          <p>*User your email as username.</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="signup-card" *ngIf="slides[1].active">
+      <ion-card-content class="cardcontent">
+
+          <!-- <ion-item> -->
+              <ion-label>I'M A: </ion-label>
+              <ion-label color="primary">{{ account.Gender }} &nbsp;&nbsp;</ion-label>
+              <a (click)="showGenderPicker()">Select</a>
+            <!-- </ion-item> -->
+
+          
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="signup-card" *ngIf="slides[2].active" >
+        <ion-card-content>
+            <ion-list radio-group>
+                <ion-list-header>
+                    WHEN WHERE YOU BORN?
+                </ion-list-header>
+                <ion-item class="custom-border">
+                  <ion-label stacked>Birthdate</ion-label>
+                  <ion-datetime [(ngModel)]="account.BirthDate" formControlName="BirthDate" ></ion-datetime>
+                </ion-item>
+              </ion-list>
+        </ion-card-content>
+      </ion-card>
+    <ion-card class="signup-card" *ngIf="slides[3].active">
+      <ion-card-content>
+          <ion-list radio-group>
+                  <ion-list-header>
+                      HOW TALL ARE YOU?
+                  </ion-list-header>
+                
+                  <ion-item class="custom-border">
+                    <ion-label stacked>Height</ion-label>
+                    <ion-multi-picker  [(ngModel)]="account.Height" 
+                    formControlName="Height"  item-content [multiPickerColumns]="parentColumns" [separator]="'-'"></ion-multi-picker>
+                  </ion-item>
+                </ion-list>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="signup-card" *ngIf="slides[4].active">
+            <ion-card-content>
+                <ion-item class="custom-border">
+                    <ion-label stacked>{{ 'PASSWORD' | translate }}</ion-label>
+                    <ion-input type="password" [(ngModel)]="account.Password" formControlName="Password"></ion-input>
+                </ion-item>
+                <ion-item class="custom-border">
+                    <ion-label stacked>Confirm password</ion-label>
+                    <ion-input type="password" [(ngModel)]="account.confirmpassword" formControlName="confirmpassword"></ion-input>
+                </ion-item>
+                <div class="term-note">
+                  <ion-checkbox [(ngModel)]="account.IsAgreeTermsCondiotion" formControlName="IsAgreeTermsCondiotion"></ion-checkbox>
+                  <div class="signup-text">By singing up for meschino wellness you are agreeing to our 
+                    <a href="#" (click)="ViewTemplate('TermsAndConditions')">privacy policy and terms</a></div>
+                </div>
+            </ion-card-content>
+          </ion-card>
+          </form>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button color="primary" class="big-btn" (click)="changeTab(currentSlide)" >{{buttonText}}</button>
+  </ion-toolbar>
+</ion-footer>

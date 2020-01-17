@@ -1,0 +1,110 @@
+<!--
+  Generated template for the DashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content>
+    <ion-header>
+        <ion-navbar color="primary">
+            <ion-title>Create My Wellness Plan</ion-title>
+        </ion-navbar>
+
+        <div class="div-center">
+
+            <div class="div-content-risk">
+                <ion-title>{{title}}</ion-title>
+                <div>
+                    <div *ngFor="let m of MeterList">
+                        <!-- <ion-title>{{m.risk_description}}</ion-title>
+                        <img src="assets/img/title_line.png">
+                         -->
+                         <ion-card-header>
+                                {{m.risk_description}}
+                        </ion-card-header>
+                        <div class="div-cirle-center">
+                            <ng-container *ngIf="m.risk_score_num == 1">
+                                <div class="canvas__container"
+                                    style="background-image: url('../../../assets/img/red.png') ;">
+                                    <img src="{{siteUrl}}images/new-layout/Risks Icons/{{m.image_location}}">
+                                </div>
+                            </ng-container>
+                            <ng-container *ngIf="m.risk_score_num == 2">
+                                <div class="canvas__container"
+                                    style="background-image: url('../../../assets/img/yellow.png') ;">
+                                    <img src="{{siteUrl}}images/new-layout/Risks Icons/{{m.image_location}}">
+                                </div>
+                            </ng-container>
+                            <ng-container *ngIf="m.risk_score_num == 3">
+                                <div class="canvas__container"
+                                    style="background-image: url('../../../assets/img/green.png') ;">
+                                    <img src="{{siteUrl}}images/new-layout/Risks Icons/{{m.image_location}}">
+                                </div>
+                            </ng-container>
+
+
+                        </div>
+                        <!-- <img style="height: 100px; width:100px; "
+                        src="http://stage-meschinowellness.azurewebsites.net/images/new-layout/Risks Icons/{{m.image_location}}"> -->
+                        <p>
+                            {{m.feedback}}
+                        </p>
+                        <ion-title> {{m.tool_phoneApp_description}} </ion-title>
+                        <span>
+                            {{m.last_updated | date: 'short'}}
+                        </span>
+                        <hr>
+                    </div>
+                    <div class="div-goals" *ngIf="ShowRecommendedGoals">
+                        <!-- <ion-title>Recommended Goals</ion-title>
+                        <img src="assets/img/title_line.png"> -->
+                        
+                        <ion-card-header>
+                                Recommended Goals
+                        </ion-card-header>
+                        <table class="tbl-hra">
+                            <tbody *ngIf="GoalList?.length != 0">
+                                <tr *ngFor="let g of GoalList" class="div-goals-items">
+                                    <td>
+                                        <img src="{{siteUrl}}/{{g.goal_image_location.replace('~/', '')}}">
+                                    </td>
+                                    <td>
+                                        <ion-title> {{g.goal_description}} </ion-title>
+                                    </td>
+                                    <td>
+                                        <ng-container *ngIf="g.goal_status_num == null || g.goal_status_num == 1">
+                                            <button ion-button color="primary" class="big-btn" (click)="SetGoals(g.goal_num);">
+                                                SET GOAL
+                                            </button>
+                                        </ng-container>
+                                        <ng-container *ngIf="g.goal_status_num !== null && g.goal_status_num != 1 ">
+                                            <button ion-button color="primary" class="big-btn" (click)="SetGoals(g.goal_num);">
+                                                VIEW GOAL
+                                            </button>
+                                        </ng-container>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody *ngIf="GoalList?.length == 0">
+                                <tr>
+                                    <td style="padding-left: 50px;text-align: center;" colspan="3"> No Recommended Goals
+                                    </td>
+                                </tr>
+                            <tbody>
+
+                        </table>
+
+                    </div>
+
+                    <div style="height: 60px;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-header>
+
+</ion-content>

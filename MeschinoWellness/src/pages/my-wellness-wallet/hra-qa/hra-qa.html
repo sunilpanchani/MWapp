@@ -1,0 +1,49 @@
+<ion-content>
+    <div class="splashbg">
+        <ion-header >
+            <ion-navbar>
+              <ion-title>Health Risk Assessment
+                  (HRA) </ion-title>
+            </ion-navbar>
+          </ion-header>
+          <div class="subtitle">
+          <p>You can pause and return to complete the HRA, however, you must complete the entire HRA before it can be processed </p>
+        </div>
+      </div>
+      <ion-card >
+          <ion-card-header>
+            {{cardData.description}}
+          </ion-card-header>
+          <ion-card-content>
+           <div *ngFor="let wdata of HraDetailQuestionList.lst_hra_question ; index as i">
+             <div [hidden]="hideQuestion[wdata.question_num].check">
+              <div *ngIf = "wdata.answer_type == 'Dropdown'">
+                  <ion-list-header> {{i + 1}} . {{wdata.question}} </ion-list-header>
+                  <ion-select [(ngModel)]="FormSectionData[wdata.question_num].answer" placeholder="Select Value" (ionChange) = "supressQuestion(wdata)">
+                    <ion-option *ngFor="let qanswer of wdata.hra_answer; index as l"  value="{{qanswer.answer_num}}">{{qanswer.answer}}</ion-option>
+                  </ion-select>
+              </div>
+          </div>
+            <div *ngIf = "wdata.answer_type == 'Objective'"  >
+                <ion-list  radio-group [(ngModel)]="FormSectionData[wdata.question_num].answer"  [hidden]="hideQuestion[wdata.question_num].check">
+                    <ion-list-header>
+                        {{ i + 1 }}. {{wdata.question}}
+                    </ion-list-header>
+                    <ion-item *ngFor="let qanswer of wdata.hra_answer; index as l" >
+                      <ion-radio value="{{qanswer.answer_num}}" (ionSelect) = "supressQuestion(wdata)"></ion-radio>
+                      <ion-label>{{qanswer.answer}}</ion-label>
+                    </ion-item>
+                </ion-list>
+            </div>
+          </div>
+          </ion-card-content>
+        </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+
+    <button *ngIf="this.HraDetailSections.length != nextCardIndex" ion-button color="primary" class="big-btn" (click)="submitSection()">Next</button>
+    <button *ngIf="this.HraDetailSections.length == nextCardIndex" ion-button color="primary" class="big-btn" (click)="submitLastSection()">Finish</button>
+  </ion-toolbar>
+</ion-footer>        
+

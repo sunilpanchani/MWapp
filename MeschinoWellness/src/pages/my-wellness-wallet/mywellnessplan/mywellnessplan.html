@@ -1,0 +1,42 @@
+<!--
+  Generated template for the DashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>Create My Wellness Plan</ion-title>
+    <ion-buttons end class="left-nav-buttons">
+      <button id="notification-button" ion-button icon-only (click)="goNotification()">
+        <ion-icon name="notifications">
+          <ion-badge id="notifications-badge" color="danger">{{notificationCount}}</ion-badge>
+        </ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="title">
+    <h3> Major Health Risk </h3>
+  </div>
+  <ion-card>
+    <ion-card-content>
+      <table class="tbl-hra">
+        <tr (click)="goToReportDetail(d.risk_page_num)" *ngFor="let d of HealthRisks">
+          <td style="padding: 10px">
+            {{d.title}}
+          </td>
+          <td>
+            <img src="assets/img/down_arrow.png" style="padding: 10px">
+          </td>
+        </tr>
+      </table>
+      <div style="height: 10px;">
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

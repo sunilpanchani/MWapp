@@ -1,0 +1,35 @@
+page-hra-body {
+    
+.splashbg { height: 280px;
+    background: url('../assets/img/header-bg.jpg') no-repeat 0px -15px transparent;
+    background-size: cover;
+  }
+  .subtitle {color: #fff;
+    top: 110px;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 20px;
+}
+  ion-card.card{ margin: 0px; width:100%;box-shadow:none; margin-top: -30px; border-radius: 20px;}
+  .select-md {
+    padding: 13px 8px 13px 16px;
+    max-width: none;
+    border: solid 1px #d9d9d9;
+    border-radius: 5px;
+    position: relative;
+  }
+  ion-card-header { font-weight: bold; text-align: center; margin: 10px 0; position: relative;
+    &:after { position: absolute; bottom:5px; left:50%; width:30px; margin-left: -15px; background: #4dbbf0; content: ""; height: 2px;}
+  }
+
+  .select .select-icon .select-icon-inner {left: auto; right:4px; color:#4dbbf0;    border-top-width: 8px; border-right-width: 8px; border-left-width: 8px; }
+   .card p{ color:#2a2e43; font-weight: 500; margin: 15px 0;}
+   .toolbar-background { display: none;}
+   ion-header .toolbar  { min-height: 96px;}
+   ion-header .toolbar-title {color: #fff; font-weight: bold;}
+   ion-header:after {display: none; }
+   .back-button {color: #fff !important;}
+   
+}

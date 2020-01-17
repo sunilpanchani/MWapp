@@ -1,0 +1,114 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+    <!-- <ion-item>
+       <ion-avatar item-start>
+        <img src="{{imageFileName}}" id="imgprofile">
+        <ion-icon id="edit" (click)="editprofilepic();">
+          <img src="assets/img/edit_icn.png">
+        </ion-icon>
+      </ion-avatar> 
+      <h2>{{account.FirstName}} {{account.LastName}} &nbsp;</h2>
+      <p>
+        <ion-icon name="medal"></ion-icon>{{rewardpoints}} Points
+      </p>
+    </ion-item> -->
+
+    <ion-buttons end>
+      <button id="done-button" ion-button (click)="uploadFile();">
+        Done
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <div style="width: 100%;">
+      <ion-avatar item-start style="float: right;">
+        <img src="{{imageFileName}}" id="imgprofile">
+        <ion-icon id="edit" (click)="editprofilepic();">
+          <img src="assets/img/edit_icn.png">
+        </ion-icon>
+      </ion-avatar>
+    </div>
+  </ion-item>
+  <div class="div-title">BASIC INFO</div>
+  <ion-item>
+
+    <div class="div-lbl-edit div-border-n"> <span>Fast Name</span> <a (click)="EditSection('FirstName');"
+        *ngIf="!DisplayFirstName"> {{account.FirstName}} <img src="assets/img/arrow.png">
+      </a>
+      <input type="text" [(ngModel)]="account.FirstName" *ngIf="DisplayFirstName" />
+    </div>
+
+
+    <div class="div-lbl-edit div-border-n"> <span>Last Name</span> <a (click)="EditSection('LastName');"
+        *ngIf="!DisplayLastName"> {{account.LastName}} <img src="assets/img/arrow.png">
+      </a>
+      <input type="text" [(ngModel)]="account.LastName" *ngIf="DisplayLastName" />
+    </div>
+
+
+    <div class="div-lbl-edit div-border-n"> <span>User Name</span> <a (click)="EditSection('UserNameNA');"
+        *ngIf="!DisplayUserName"> {{account.UserName}} <img src="assets/img/arrow.png">
+      </a>
+      <input type="email" [(ngModel)]="account.UserName" *ngIf="DisplayUserName" />
+    </div>
+
+
+  </ion-item>
+  <div class="div-title">GENDER</div>
+  <ion-item>
+
+    <div class="div-lbl-edit"> <span>I am</span>
+
+      <!-- <a (click)="EditSection('Gender');"
+        *ngIf="!DisplayGender">{{ account.Gender}} <img src="assets/img/arrow.png"></a> -->
+
+
+
+      <a (click)="showGenderPicker()">{{ account.Gender}} <img src="assets/img/arrow.png"></a>
+
+      <!-- <ion-select [(ngModel)]="account.Gender" *ngIf="DisplayGender">
+        <ion-option value="male">Male</ion-option>
+        <ion-option value="female">Female</ion-option>
+      </ion-select> -->
+
+    </div>
+  </ion-item>
+  <div class="div-title">DATE OF BIRTH</div>
+
+  <ion-card class="ioncard" style="padding-top: 15px">
+    <div class="div-lbl-edit2"> <span>I'm born on</span>
+      <a>
+        <ion-datetime [(ngModel)]="account.BirthDate" name="BirthDate">
+
+        </ion-datetime>
+        &nbsp; <img src="assets/img/arrow.png">
+      </a>
+    </div>
+  </ion-card>
+  <div class="div-title">HEIGHT</div>
+
+
+
+  <ion-card class="ioncard" style="padding-top: 15px">
+    <div class="div-lbl-edit2"> <span>My height is</span>
+      <a>
+        <ion-multi-picker [(ngModel)]="UIHeight" item-content [multiPickerColumns]="parentColumns" [separator]="'-'"
+          name="Height">
+        </ion-multi-picker>
+        &nbsp; <img src="assets/img/arrow.png">
+      </a>
+    </div>
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+
+</ion-footer>

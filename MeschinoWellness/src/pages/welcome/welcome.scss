@@ -1,0 +1,59 @@
+page-welcome {
+  .splash-bg {
+    position: relative;
+    background: url('../assets/img/spalsh-bg.png') no-repeat transparent;
+    background-size: cover;
+	height:100%;
+ 
+  }
+
+.button-info{
+position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+	}
+
+  .splash-info {
+    position: relative;
+    z-index: 2;
+    margin-top: -64px;
+    text-align: center;
+  }
+  .splash-logo {
+    margin: auto;
+    background: url('../assets/img/appicon.png') repeat transparent;
+    background-size: 100%;
+    width: 128px;
+    height: 128px;
+  }
+  .splash-intro {
+    font-size: 18px;
+    font-weight: bold;
+    max-width: 80%;
+    margin: auto;
+  }
+  button.login {
+    margin-top: 25px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+	border-radius: 6px;
+	border: 1px solid rgb(255, 255, 255);
+	box-shadow: none;
+    &.activated {
+      background-color: rgb(220, 220, 220);
+    }
+  }
+  button.signup {
+    margin-top: 25px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(48, 112, 183);
+	border-radius: 6px;
+	border: 1px solid rgb(255, 255, 255);
+	box-shadow: none;
+    &.activated {
+      background-color: rgb(220, 220, 220);
+    }
+  }
+}

@@ -1,0 +1,38 @@
+page-login {
+  .splash-bg {
+    position: relative;
+    background: url('../assets/img/app-bg.jpg') no-repeat 0px -15px transparent;
+    background-size: 100% auto;
+    height: 240px;
+    z-index: -1;
+  }
+
+  .login-card {
+    margin: -40px auto 0;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Gotham';
+    font-weight: 300;
+    position: absolute;
+    bottom: 65px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .forgot-btn { margin:20px 0;}
+  .signup-text { font-size:13px; color:#7c7c7c; width:100%; text-align: center;padding:20px 0; margin-top: 10px;}
+  
+
+  .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner
+  {
+    border:none;
+    box-shadow:none;
+  }
+
+  .no-border {
+    border:none;
+  }
+}

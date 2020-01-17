@@ -1,0 +1,43 @@
+
+
+
+<ion-content >
+    <div class="splashbg">
+        <ion-header >
+            <ion-navbar>
+              <ion-title>Health Risk Assessment <br>
+                  (HRA) </ion-title>
+            </ion-navbar>
+          </ion-header>
+          <div class="subtitle">
+          <p>You can pause and return to complete the HRA, however, you must complete the entire HRA before it can be processed </p>
+        </div>
+      </div>
+      <ion-card >
+
+          <ion-card-header>
+            Body Metrics 
+          </ion-card-header>
+        
+          <ion-card-content>
+            <p>1. Please select your weight in pounds from the drop-down menu.</p>
+
+            <ion-select [(ngModel)]="account.pounds">
+              <ion-option *ngFor="let wdata of weightData" value="{{wdata.description}}">{{wdata.description}}</ion-option>
+            </ion-select>
+           
+            <p>2. Please select your waist circumference in inches from the drop-down menu. </p>
+            <ion-select [(ngModel)]="account.inches">
+              <ion-option *ngFor="let data of waistData" value="{{data.description}}">{{data.description}}</ion-option>
+            </ion-select>
+          </ion-card-content>
+        
+        </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button color="primary" class="big-btn" (click)="submit()" >Next</button>
+  </ion-toolbar>
+</ion-footer>
