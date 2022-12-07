@@ -37,7 +37,7 @@
     "@types/jquery": "^3.3.31",
     "angularfire2": "^5.3.0",
     "cordova-android": "^8.1.0",
-    "cordova-browser": "5.0.4",
+    "cordova-browser": "6.0.0",
     "cordova-ios": "4.5.5",
     "cordova-plugin-androidx": "^1.0.2",
     "cordova-plugin-androidx-adapter": "^1.1.0",
